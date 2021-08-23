@@ -9,23 +9,30 @@ public class SnakeAndLadderGame {
 	public static void main(String[] args) {
 		int startPosition=0;
 		int currentPosition=0;
-		int numberOnDie=(int)Math.floor(Math.random()*10)%6+1;
-		int option=(int)Math.floor(Math.random()*10)%3;
-		
-
-		if(option==NO_PLAY) {
+		while(currentPosition<100) {
+			int numberOnDie=(int)Math.floor(Math.random()*10)%6+1;
+			int option=(int)Math.floor(Math.random()*10)%3;
+			
+	
+			if(option==NO_PLAY) {
+				
+			}
+			
+			if(option==LADDER) {
+				currentPosition+=numberOnDie;
+			}
+				
+				
+			if(option==SNAKE) {
+			        currentPosition-=numberOnDie;
+			        if(currentPosition<0)
+						currentPosition=0;
+				
+		    }
 			
 		}
-		
-		if(option==LADDER) {
-			currentPosition+=numberOnDie;
-		}
+		System.out.println("Player Wins");
 			
-			
-		if(option==SNAKE) {
-		        currentPosition-=numberOnDie;
-			
-	    }
 	}
 
 }
