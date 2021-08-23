@@ -19,7 +19,10 @@ public class SnakeAndLadderGame {
 			}
 			
 			if(option==LADDER) {
-				currentPosition+=numberOnDie;
+				if(currentPosition+numberOnDie>100)
+				{}
+				else
+					currentPosition+=numberOnDie;
 			}
 				
 				
@@ -29,6 +32,8 @@ public class SnakeAndLadderGame {
 						currentPosition=0;
 				
 		    }
+			if(currentPosition==100)
+				break;
 			
 		}
 		System.out.println("Player Wins");
