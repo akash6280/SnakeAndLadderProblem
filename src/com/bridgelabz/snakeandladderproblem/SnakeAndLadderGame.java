@@ -9,10 +9,11 @@ public class SnakeAndLadderGame {
 	public static void main(String[] args) {
 		int startPosition=0;
 		int currentPosition=0;
+		int numberOfPlays=0;
 		while(currentPosition<100) {
 			int numberOnDie=(int)Math.floor(Math.random()*10)%6+1;
 			int option=(int)Math.floor(Math.random()*10)%3;
-			
+			numberOfPlays++;
 	
 			if(option==NO_PLAY) {
 				
@@ -32,10 +33,13 @@ public class SnakeAndLadderGame {
 						currentPosition=0;
 				
 		    }
+			System.out.println("Position :"+currentPosition);
+			
 			if(currentPosition==100)
 				break;
 			
 		}
+		System.out.println("NUmber of time die rolled :"+numberOfPlays);
 		System.out.println("Player Wins");
 			
 	}
